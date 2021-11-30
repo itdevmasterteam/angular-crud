@@ -1,0 +1,61 @@
+<nav class="navbar navbar-dark bg-primary" >
+    <div class="container-fluid" style="display: flex;flex-direction: row;justify-content: center;padding: 10px;">
+        <h3  style="text-align: center;text-transform: uppercase;">Angular Crud Operation</h3>
+
+    </div>
+</nav>
+   <div class="row">
+     <div style="display: flex;flex-direction: row;justify-content: center;padding: 10px;">
+        <button  color="warn" class="btn btn-primary" (click)="createEmployee()"  >
+                          <i class="bi bi-plus-square-fill">Create</i>
+                      </button>
+     </div>
+  
+            <table class="table table-bordered table-dark">
+              <thead >
+                <tr>
+                <th scope="col">
+                  First name
+                </th>
+                 <th scope="col">
+                  Middle name
+                </th>
+                <th scope="col">
+                  Last name
+                </th>
+                   <th scope="col">
+                  Age 
+                </th>
+
+                   <th scope="col">
+                  Actions 
+                </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of employeeArray">
+                  <td  scope="row">
+                    {{item.firstName}}
+                  </td>
+                   <td scope="row" >
+                    {{item.middleName}}
+                  </td>
+                    <td scope="row" >
+                    {{item.lastName}}
+                  </td >
+                    <td >
+                    {{item.age}}
+                  </td>
+                  <td scope="row">
+                      <button mat-icon-button color="warn" class="btn btn-primary" (click)="edit(item._id)"  >
+                          <i class="bi bi-pencil-square">Edit</i>
+                      </button>
+                      <button mat-icon-button color="warn" class="btn btn-danger" (click)="delete(item._id)">
+                        <i class="bi bi-trash-fill" style="color: black;">Delete</i>
+                    </button>
+               
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+    </div>

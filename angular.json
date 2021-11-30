@@ -28,6 +28,8 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+               "node_modules/ngx-toastr/toastr.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -124,5 +126,8 @@
       }
     }
   },
-  "defaultProject": "angular-crud"
+  "defaultProject": "angular-crud",
+  "cli": {
+    "analytics": "badb77e0-1263-4ff0-a81e-5329a0f0de0e"
+  }
 }
