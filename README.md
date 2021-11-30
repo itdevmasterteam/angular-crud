@@ -25,3 +25,28 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## adding bootstrap
+Bootstrap is used
+please follow the steps properly to install boostrap and icons
+
+
+1. npm install --save bootstrap
+2. npm i bootstrap-icons --save
+
+3.  add in angular.json
+            "node_modules/bootstrap/dist/css/bootstrap.min.css",
+            "node_modules/ngx-toastr/toastr.css",
+            "src/styles.css"
+
+4.  add in  styles.css
+              @import url("../node_modules/bootstrap/dist/css/bootstrap.min.css");
+              @import "~bootstrap-icons/font/bootstrap-icons.css";
+
+# adding ngx toaster
+npm install ngx-toastr --save@9.1.1
+ npm install @angular/animations --save
+
+ # styles.css
+ @import '~ngx-toastr/toastr';
+
